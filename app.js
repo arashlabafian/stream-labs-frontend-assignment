@@ -62,6 +62,17 @@ function drawImages() {
       image.data.width,
       image.data.height
     );
+
+    if (image.data.isDragging) {
+      state.canvasContext.lineWidth = "2";
+      state.canvasContext.strokeStyle = "green";
+      state.canvasContext.strokeRect(
+        image.data.x,
+        image.data.y,
+        image.data.width,
+        image.data.height
+      );
+    }
   });
 }
 
