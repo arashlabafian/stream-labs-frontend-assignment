@@ -46,9 +46,13 @@ function loadImage(src) {
 }
 
 function render() {
-  state.canvasContext.clearRect(0, 0, state.canvas.width, state.canvas.height);
+  clear();
   drawImages();
 }
+
+const clear = () => {
+  state.canvasContext.clearRect(0, 0, state.canvas.width, state.canvas.height);
+};
 
 function drawImages() {
   state.images.forEach((image) => {
